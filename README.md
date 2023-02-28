@@ -1,6 +1,6 @@
 # Disaster Management System
 
-## Plan
+## Project Outline
 
 ![disastermanagementsystemplan](https://user-images.githubusercontent.com/90335449/221767228-42ea2107-db39-4f81-a17e-261d3f939342.jpg)
 
