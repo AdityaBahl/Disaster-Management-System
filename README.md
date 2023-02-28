@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Disaster Management System
+
+## Plan
+
+![disastermanagementsystemplan](https://user-images.githubusercontent.com/90335449/221767228-42ea2107-db39-4f81-a17e-261d3f939342.jpg)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
