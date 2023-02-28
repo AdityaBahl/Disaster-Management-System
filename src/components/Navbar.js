@@ -26,7 +26,37 @@ export default function Example() {
                 className="p-1 font-normal"
             >
                 <a href="#" className="flex items-center">
-                    Pages
+                    Weather
+                </a>
+            </Typography>
+            <Typography
+                as="li"
+                variant="small"
+                color="blue-gray"
+                className="p-1 font-normal"
+            >
+                <a href="#" className="flex items-center">
+                    Updates
+                </a>
+            </Typography>
+            <Typography
+                as="li"
+                variant="small"
+                color="blue-gray"
+                className="p-1 font-normal"
+            >
+                <a href="#" className="flex items-center">
+                    Nearby Help
+                </a>
+            </Typography>
+            <Typography
+                as="li"
+                variant="small"
+                color="blue-gray"
+                className="p-1 font-normal"
+            >
+                <a href="#" className="flex items-center">
+                    Tips and Precautions
                 </a>
             </Typography>
             <Typography
@@ -37,26 +67,6 @@ export default function Example() {
             >
                 <a href="#" className="flex items-center">
                     Account
-                </a>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-normal"
-            >
-                <a href="#" className="flex items-center">
-                    Blocks
-                </a>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-normal"
-            >
-                <a href="#" className="flex items-center">
-                    Docs
                 </a>
             </Typography>
         </ul>
@@ -71,11 +81,11 @@ export default function Example() {
                     variant="small"
                     className="mr-4 cursor-pointer py-1.5 font-normal"
                 >
-                    <span>Material Tailwind</span>
+                    <span>Disaster Buddy 🤖</span>
                 </Typography>
                 <div className="hidden lg:block">{navList}</div>
                 <Button variant="gradient" size="sm" className="hidden lg:inline-block">
-                    <span>Buy Now</span>
+                    <span>Log Out</span>
                 </Button>
                 <IconButton
                     variant="text"
@@ -119,7 +129,7 @@ export default function Example() {
                 <div className="container mx-auto">
                     {navList}
                     <Button variant="gradient" size="sm" fullWidth className="mb-2">
-                        <span>Buy Now</span>
+                        <span>Log Out</span>
                     </Button>
                 </div>
             </MobileNav>
