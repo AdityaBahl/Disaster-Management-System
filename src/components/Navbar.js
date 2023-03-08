@@ -6,7 +6,7 @@ import {
     Button,
     IconButton,
 } from "@material-tailwind/react";
-
+import { Link } from "react-router-dom";
 export default function Example() {
     const [openNav, setOpenNav] = useState(false);
 
@@ -25,9 +25,9 @@ export default function Example() {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <a href="#" className="flex items-center">
+                <Link to="/WeatherPage" className="flex items-center">
                     Weather
-                </a>
+                </Link>
             </Typography>
             <Typography
                 as="li"
@@ -35,9 +35,9 @@ export default function Example() {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <a href="#" className="flex items-center">
+                <Link to="/UpdatesPage" className="flex items-center">
                     Updates
-                </a>
+                </Link>
             </Typography>
             <Typography
                 as="li"
@@ -45,9 +45,9 @@ export default function Example() {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <a href="#" className="flex items-center">
+                <Link to="/NearbyHelpPage" className="flex items-center">
                     Nearby Help
-                </a>
+                </Link>
             </Typography>
             <Typography
                 as="li"
@@ -55,9 +55,9 @@ export default function Example() {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <a href="#" className="flex items-center">
+                <Link to="/TipsPage" className="flex items-center">
                     Tips and Precautions
-                </a>
+                </Link>
             </Typography>
             <Typography
                 as="li"
@@ -65,9 +65,9 @@ export default function Example() {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <a href="#" className="flex items-center">
+                <Link to="/AccountPage" className="flex items-center">
                     Account
-                </a>
+                </Link>
             </Typography>
         </ul>
     );
