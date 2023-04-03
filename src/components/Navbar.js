@@ -25,7 +25,7 @@ export default function Example() {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <Link to="/WeatherPage" className="flex items-center">
+                <Link to="/Weather" className="flex items-center">
                     Weather
                 </Link>
             </Typography>
@@ -35,7 +35,7 @@ export default function Example() {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <Link to="/UpdatesPage" className="flex items-center">
+                <Link to="/Updates" className="flex items-center">
                     Updates
                 </Link>
             </Typography>
@@ -45,7 +45,7 @@ export default function Example() {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <Link to="/NearbyHelpPage" className="flex items-center">
+                <Link to="/NearbyHelp" className="flex items-center">
                     Nearby Help
                 </Link>
             </Typography>
@@ -55,7 +55,7 @@ export default function Example() {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <Link to="/TipsPage" className="flex items-center">
+                <Link to="/Tips" className="flex items-center">
                     Tips and Precautions
                 </Link>
             </Typography>
@@ -65,7 +65,7 @@ export default function Example() {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <Link to="/AccountPage" className="flex items-center">
+                <Link to="/Account" className="flex items-center">
                     Account
                 </Link>
             </Typography>
