@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import UpdatesItem from "../components/UpdatesItem";
+import UpdatesItem from "./UpdatesItem";
+import Spinner from "./spinner";
 import './styles/Updates.css';
 import PropTypes from 'prop-types'
 export class Updates extends Component {
@@ -21,8 +22,20 @@ export class Updates extends Component {
       page: 1
     }
   }
+
+  async updateNews() {
+    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=2c4b1aa3e76a48bf863af1210189fbc9&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    this.setState({ loading: true });
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    this.setState({
+      articles: parsedData.articles,
+      totalResults: parsedData.totalResults,
+      loading: false
+    })
+  }
   async componentDidMount() {
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=health&apiKey=2c4b1aa3e76a48bf863af1210189fbc9&page=1&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=2c4b1aa3e76a48bf863af1210189fbc9&page=1&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsedData = await data.json();
@@ -35,7 +48,7 @@ export class Updates extends Component {
 
   handlePrevClick = async () => {
     console.log("Previous");
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=health&apiKey=2c4b1aa3e76a48bf863af1210189fbc9&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=2c4b1aa3e76a48bf863af1210189fbc9&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsedData = await data.json();
@@ -49,7 +62,7 @@ export class Updates extends Component {
   handleNextClick = async () => {
     console.log("Next");
     if (!(this.state.page + 1 > Math.ceil(this.state.totalResults / this.props.pageSize))) {
-      let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=health&apiKey=2c4b1aa3e76a48bf863af1210189fbc9&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
+      let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=2c4b1aa3e76a48bf863af1210189fbc9&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
       this.setState({ loading: true });
       let data = await fetch(url);
       let parsedData = await data.json();
@@ -66,6 +79,7 @@ export class Updates extends Component {
     return (
       <div className="container my-3 ">
         <h1 className="text-center" style={{ margin: '40px 0px;' }}>NewsMonkey - Top Headlines</h1>
+        {this.state.loading && <Spinner />}
         <div className="custom-space row">
           {
             !this.state.loading && this.state.articles.map((element) => {
