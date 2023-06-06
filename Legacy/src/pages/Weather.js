@@ -2,12 +2,13 @@ import React from 'react'
 
 const Weather = () => {
   return (
-    <div className="container">
+    <div className="flex justify-center items-start h-screen">
+       <div className="max-w-sm rounded overflow-hidden shadow-lg">
       <form className="col-md-6 m-auto py-5">
         <div className="input-group mb-3 flex justify-center">
           <input id="city-name" type="text" className="form-control-4 hover:bg-gray-200 font-bold py-2 px-4 rounded"
             placeholder="Enter a location" />
-          <div className="input-group-append">
+          <div className="input-group-append">  
             <button onclick="searchTemperature()" type="button"
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Search
@@ -31,6 +32,7 @@ const Weather = () => {
                 you a great day! ♥❤♥❤♥</span>
             </div>
           </div>
+        </div>
         </div>
       </div>
       <script src="WeatherAPI.js"></script>
