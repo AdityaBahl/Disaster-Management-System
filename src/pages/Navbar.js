@@ -50,6 +50,7 @@ export default function Example() {
                 <Link to="/NearbyHelp" className="flex items-center">
                     Prediction
                 </Link>
+
             </Typography>
             <Typography
                 as="li"
@@ -61,6 +62,8 @@ export default function Example() {
                     Tips and Precautions
                 </Link>
             </Typography>
+
+            {/*
             <Typography
                 as="li"
                 variant="small"
@@ -70,8 +73,9 @@ export default function Example() {
                 <Link to="/Account" className="flex items-center">
                     Account
                 </Link>
-            </Typography>
-        </ul>
+        </Typography>
+    */}
+        </ul >
     );
     const clicklogout = () => {
         signOut(auth);
